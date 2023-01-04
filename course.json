@@ -1,0 +1,18 @@
+[
+    {
+        "ID":1,
+        "Course_change":"CSE"
+    },
+    {
+        "ID":2,
+        "Course_change":"EE"
+    },
+    {
+        "ID":3,
+        "Course_change":"IT"
+    },
+    {
+        "ID":4,
+        "Course_change":"ME"
+    }
+]

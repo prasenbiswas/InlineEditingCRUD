@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRUD Operations  </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container my-3">
+        <h1 class="text-center">Welcome To CRUD Operations</h1>
+    </div>
+
+ <!-- ------------------------ new user data add from below section -------------------- -->
+    <div class="container my-3 ">
+        <!-- Button trigger modal -->
+        <div class="row  my-2">
+            <div class="col d-flex justify-content-end" id="addBtn">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Add +
+                </button>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Users</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="" id="myForm">
+                        <div class="modal-body">
+
+                          <!-- ------------Name input----------------------
+                           -->
+                            <div class="row g-3 align-items-center my-2">
+                                <div class="col-auto">
+                                  <label for="inputName" class="col-form-label">Name</label>
+                                </div>
+                                <div class="col-auto">
+                                  <input type="text" id="inputName" name="Name" class="form-control" minlength="2" required>
+                                </div>
+                              </div>
+
+                              <!-- -------------------------- email input-------------------------- -->
+
+                            <div class="row g-3 align-items-center my-2">
+                                <div class="col-auto">
+                                  <label for="inputEmail" class="col-form-label">Email</label>
+                                </div>
+                                <div class="col-auto">
+                                  <input type="Email" id="inputEmail" name="Email" class="form-control" required>
+                                </div>
+                              </div>
+
+                              <!-- -------------------Roll Number Input -------------------  -->
+
+                            <div class="row g-3 align-items-center my-2">
+                                <div class="col-auto">
+                                  <label for="inputRoll_No" class="col-form-label">Roll_No</label>
+                                </div>
+                                <div class="col-auto">
+                                  <input type="number" id="inputRoll_No" name="Roll_No" class="form-control" required>
+                                </div>
+                              </div>
+
+                              <!-- ------------------------course input -----------------  -->
+
+                            <div class="row g-3 align-items-center my-2">
+                                <div class="col-auto">
+                                  <label for="inputOption" class="col-form-label">Course</label>
+                                </div>
+
+ <!-- --------------------------------------select section for add new data--------------------- -->
+
+                                <div class="col-auto">
+                                  <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="inputOption">
+                                    <option selected></option>
+                                  </select>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary"onclick="saveChanges()">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- --------------------- table section start from here------------------ -->
+  <div class="container" style="height: 550px; overflow-y: scroll;">
+        <table class="table" border="2">
+            <thead id="thead">
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+  </div>
+
+  <!-- ----------------------------for delete permition modal--------------------- -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Delete Data</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure want to delete
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="understood()" data-bs-dismiss="modal" >Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="/index.js"></script>
+</body>
+
+</html>
